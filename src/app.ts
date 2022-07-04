@@ -4,8 +4,12 @@ import helloWorld from './controllers/hello.controller';
 import * as helmet from "helmet";
 import rateLimit, { MemoryStore } from 'express-rate-limit'
 import cors from 'cors';
+import * as MySQLConnector from './utils/mysql.connector';
+
 
 const app = express();
+MySQLConnector.init();
+
 const globalRateLimiter = rateLimit({
 	windowMs: 15 * 60 * 1000,
 	max: 100,

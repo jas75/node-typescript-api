@@ -1,0 +1,16 @@
+import { Request } from 'express';
+
+export interface ITeam {
+  id: number;
+  name: string;
+  league: string,
+  isActive: boolean
+};
+
+export interface IGetTeamReq extends Request<{ id: ITeam['id'] }> { }
+export interface IAddTeamReq extends Request { }
+export interface IUpdateTeamReq extends Request<{ id: ITeam['id'] }, any, ITeam> { }
+export interface IDeleteTeamReq extends Request<{ id: ITeam['id'] }> { }
+
+
+https://www.becomebetterprogrammer.com/how-to-develop-simple-crud-api-in-express-js-using-typescript/
