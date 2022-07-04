@@ -1,0 +1,73 @@
+il manque
+
+prettier
+eslint ts lint
+
+authentification
+
+schema validator
+
+CI/CD ?
+
+deploiement
+
+Swagger 
+
+
+Further rules:
+Validate client input. Here’s a list of validators.
+Scan your packages for vulnerabilities often. You can usenpm audit
+Use generic error messages so you don’t reveal too much and log the specific errors.
+Use a strong authentication.
+
+
+
+CONCEPTION DE LA BASE
+
+contexte:
+Il y a une penurie de jobs saisonniers qui impacte l industrie de la restauration
+pour cela nous proposons un solution qui permet aux clients de commander et de payer directement en scannt un qrcode
+
+le client assis sur une table numerote scanne un qrcode
+il a le menu propose par le restaurateur qui s affiche, le ou les clients font leurs choix puis envoie la commande au restaurateur qui ensuite sera interface sur son logiciel de caisse (ou pas)
+
+
+roadmap
+le client choisis un/plusieurs plat dans le menu 
+le client envoie la commande
+le restaurateur recoit la commande avec les plats choisis 
+
+
+il recoit la notif et ensuite on lui demande si il veut l imprimer
+"" n hesitez pas a rescanner le qr code pour choisir un nouveau produit" ou un truc comme ca
+
+
+sur le dashboard cote resto on veut avoir les demandes de serveurs ou d assistance et les comande recues
+
+
+le restaurateur peut cloturer une ommande
+
+
+sur le serveur de notif push il faut un mongodb pour store les notifs
+
+
+
+
+le restaurateur peut cloturer une commande, mais s'il veut la rouvrir il faut s assurer que une commande sur cette table n est pas en cours
+
+demarchage:
+cibler les restaurateurs en galere de serveurs (demande urgente)
+
+feature interessante
+masquer la disponibilité d’un produit ;
+ajouter un nouveau produit à la carte ;
+promouvoir et décrire les produits de votre établissement ;
+mettre en valeur vos produits additionnels.
+
+
+COMMANDE DOCKER
+
+MYSQL
+
+docker run --name mysql-instance-db -v /my/custom:/etc/mysql/conf.d -p 3000:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+
